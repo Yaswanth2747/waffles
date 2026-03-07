@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# Local/editor
+.vscode/
+
+# Reproducible raw datasets and bulky generated corpora
+02_data/datasets/
+03_outputs/05_corpus/activation_corpus_mobilenet/
+03_outputs/05_corpus/activation_corpus_mobilenet_5000/
+03_outputs/05_corpus/ann_index_mobilenet_5000/
+
+# Optional bulky binary artifacts
+*.pt
+*.pth

@@ -1,0 +1,21 @@
+query_path=datasets/imagenette2-160/val/n01440764/n01440764_10320.JPEG
+query_label_imagenet=0
+total_packets=31
+missing_pct=20.0
+missing_packets=6
+total_combinations=736281
+true_missing=[13, 16, 18, 19, 23, 29]
+best_corpus_idx=256
+best_corpus_path=datasets/imagenette2-160/train/n01440764/n01440764_13694.JPEG
+best_corpus_label_imagenet=0
+best_score=23.232498
+recovered_missing=[13, 16, 18, 19, 23, 29]
+exact_match=True
+overlap=6/6
+
+Top candidates:
+corpus_idx=256 score=23.232498 exact_match=True overlap=6/6 label=0 path=datasets/imagenette2-160/train/n01440764/n01440764_13694.JPEG
+corpus_idx=87 score=23.132868 exact_match=True overlap=6/6 label=0 path=datasets/imagenette2-160/train/n01440764/n01440764_10726.JPEG
+corpus_idx=494 score=22.941738 exact_match=True overlap=6/6 label=0 path=datasets/imagenette2-160/train/n01440764/n01440764_3098.JPEG
+corpus_idx=462 score=22.863016 exact_match=True overlap=6/6 label=0 path=datasets/imagenette2-160/train/n01440764/n01440764_2803.JPEG
+corpus_idx=270 score=22.855854 exact_match=True overlap=6/6 label=0 path=datasets/imagenette2-160/train/n01440764/n01440764_13905.JPEG

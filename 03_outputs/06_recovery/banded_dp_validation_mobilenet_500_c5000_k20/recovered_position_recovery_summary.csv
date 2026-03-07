@@ -1,0 +1,2 @@
+queries,missing_pct,aligner,exact_match_rate_pct,mean_overlap_packets,mean_overlap_fraction_pct,mean_query_time_sec
+500,20.0,banded_dp,87.0,5.812,96.86666666666667,0.3418537532059945

@@ -1,0 +1,29 @@
+query_path=datasets/imagenette2-160/val/n01440764/ILSVRC2012_val_00009111.JPEG
+query_label_imagenet=0
+total_packets=31
+missing_pct=20.0
+missing_packets=6
+total_combinations=736281
+candidate_count=50
+true_missing=[13, 16, 18, 19, 23, 29]
+best_corpus_idx=433
+best_corpus_path=datasets/imagenette2-160/train/n01440764/n01440764_25478.JPEG
+best_corpus_label_imagenet=0
+best_score=7.919938
+best_signature_cosine=0.341085
+best_full_activation_cosine=0.323690
+recovered_missing=[13, 16, 18, 19, 23, 29]
+exact_match=True
+overlap=6/6
+timing_edge_forward_sec=0.616776
+timing_observed_prep_sec=2.977837
+timing_candidate_retrieval_sec=0.007480
+timing_alignment_dotproducts_sec=0.011660
+timing_alignment_dp_sec=0.627391
+timing_alignment_total_sec=0.639051
+timing_script_measured_sec=7.224347
+
+Top candidates:
+corpus_idx=433 score=7.919938 sig_cos=0.341085 full_cos=0.323690 exact_match=True overlap=6/6 label=0 path=datasets/imagenette2-160/train/n01440764/n01440764_25478.JPEG
+corpus_idx=436 score=6.765483 sig_cos=0.312429 full_cos=0.276570 exact_match=True overlap=6/6 label=0 path=datasets/imagenette2-160/train/n01440764/n01440764_2575.JPEG
+corpus_idx=649 score=6.286497 sig_cos=0.314463 full_cos=0.258625 exact_match=False overlap=5/6 label=0 path=datasets/imagenette2-160/train/n01440764/n01440764_5623.JPEG
