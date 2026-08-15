@@ -1,7 +1,9 @@
 # Content-Based Packet Alignment for Split Inference
 
 This repository studies split neural inference under packet loss, with a focus on whether missing packet positions can be recovered from the activation content itself.
-
+<p align="center">
+  <img src="05_reports/cover.png" width="1600" alt="Waffles Project">
+</p>
 The core result is simple:
 
 - `random` placement is catastrophic
@@ -16,10 +18,16 @@ The strongest current result is on `mobilenet_v2` with a training activation cor
 
 ## Repository Layout
 
-- [01_code](01_code): all runnable Python scripts
+- [01_code](01_code): all runnable Python scripts for split inference, packet corruption, corpus-based recovery, alignment, benchmarking, and report generation
 - [02_data](02_data): local test images and dataset placeholders
-- [03_outputs](03_outputs): plots, CSVs, benchmark outputs
-- [04_notebooks](04_notebooks): exploratory notebooks
+- [03_outputs](03_outputs): plots, CSVs, benchmark results, activation corpora, and experiment outputs
+- [04_notebooks](04_notebooks): exploratory notebooks and analysis
+- [05_reports](05_reports): project report and final presentation slides
+
+## Project Documentation
+
+- [Project Report](05_reports/report.pdf): detailed methodology, experiments, results, and analysis
+- [Final Presentation](05_reports/final_presentation.pdf): summary of the problem, approach, experiments, and key results
 
 ## Main Figures
 
@@ -167,11 +175,6 @@ Recovery quality:
 | 20 | 92.0% | 97.33% |
 | 40 | 90.0% | 98.50% |
 
-Source files:
-- [20% metrics](03_outputs/06_recovery/recovered_position_validation_mobilenet_100_c5000_k20/recovered_position_inference_metrics.csv)
-- [20% recovery](03_outputs/06_recovery/recovered_position_validation_mobilenet_100_c5000_k20/recovered_position_recovery_summary.csv)
-- [40% metrics](03_outputs/06_recovery/recovered_position_validation_mobilenet_100_c5000_k40/recovered_position_inference_metrics.csv)
-- [40% recovery](03_outputs/06_recovery/recovered_position_validation_mobilenet_100_c5000_k40/recovered_position_recovery_summary.csv)
 
 ### Greedy window rematching, 500 queries
 
@@ -180,11 +183,6 @@ Source files:
 | 20 | 77.8% | 88.17% | 0.0261 s | 78.2 / 92.4 | 70.0 / 82.4 |
 | 40 | 73.0% | 88.90% | 0.0230 s | 64.0 / 82.4 | 56.8 / 71.6 |
 
-Source files:
-- [20% metrics](03_outputs/06_recovery/rematched_validation_mobilenet_500_c5000_k20/recovered_position_inference_metrics.csv)
-- [20% recovery](03_outputs/06_recovery/rematched_validation_mobilenet_500_c5000_k20/recovered_position_recovery_summary.csv)
-- [40% metrics](03_outputs/06_recovery/rematched_validation_mobilenet_500_c5000_k40/recovered_position_inference_metrics.csv)
-- [40% recovery](03_outputs/06_recovery/rematched_validation_mobilenet_500_c5000_k40/recovered_position_recovery_summary.csv)
 
 ### Banded-DP rematching, 500 queries
 
@@ -193,11 +191,6 @@ Source files:
 | 20 | 87.0% | 96.87% | 0.3419 s | 78.2 / 92.4 | 77.6 / 92.2 |
 | 40 | 80.4% | 96.97% | 0.6846 s | 64.0 / 82.4 | 62.8 / 81.2 |
 
-Source files:
-- [20% metrics](03_outputs/06_recovery/banded_dp_validation_mobilenet_500_c5000_k20/recovered_position_inference_metrics.csv)
-- [20% recovery](03_outputs/06_recovery/banded_dp_validation_mobilenet_500_c5000_k20/recovered_position_recovery_summary.csv)
-- [40% metrics](03_outputs/06_recovery/banded_dp_validation_mobilenet_500_c5000_k40/recovered_position_inference_metrics.csv)
-- [40% recovery](03_outputs/06_recovery/banded_dp_validation_mobilenet_500_c5000_k40/recovered_position_recovery_summary.csv)
 
 ### Matching Algorithm Takeaway
 
@@ -223,10 +216,6 @@ Interpretation:
 - MobileNetV2 is much faster
 - ViT-B/16 is much more robust to packet-placement uncertainty
 
-Sources:
-- [table CSV](03_outputs/04_comparisons/fixed_bw_40mb_losspct_comparison/fixed_bw_accuracy_table.csv)
-- [plot](03_outputs/04_comparisons/fixed_bw_40mb_losspct_comparison/accuracy_vs_loss_pct.png)
-
 ### Bandwidth sweep
 
 Main figure:
@@ -236,11 +225,6 @@ High-level result:
 - tested bandwidth changes end-to-end latency strongly
 - for the tested ranges, optimal split stayed fixed for both models
 - robustness trends were driven by model and packet-loss mode more than bandwidth itself
-
-Sources:
-- [combined summary](03_outputs/04_comparisons/combined_model_comparison/combined_summary.csv)
-- [ViT report](03_outputs/03_bandwidth/bandwidth_split_validation_report_vit_gpu/validation_report_by_bandwidth.csv)
-- [MobileNet report](03_outputs/03_bandwidth/bandwidth_split_validation_report_mobilenet_gpu/validation_report_by_bandwidth.csv)
 
 ## How To Reproduce Main Results
 
